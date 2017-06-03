@@ -173,7 +173,7 @@ body{
 /*PAGE ALBUM ID*/
 .album-presentation {
   display: flex;
-  margin-top: 140px;
+  margin-top: 100px;
   justify-content: center;
 
 }
@@ -214,11 +214,31 @@ body{
   color:#01423c;
   font-family: 'Open Sans', sans-serif;
   background-color: white;
+  margin-bottom: 30px;
+}
+.lineperline-base{
+  background-color: #099185;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .lineperline{
   border-bottom: solid 1px #099185;
   padding: 10px;
+}
+
+.info-1{
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.info-2 {
+  padding-left: 70px;
+}
+.info-3{
+  float:right;
+  margin-right: 20px;
 }
 
 /*MEDIA QUERIES*/

@@ -13,11 +13,16 @@
 
 <div class="song-presentation">
   <div class="song-zone">
+    <div class="lineperline-base">
+      <span class="info-1"> n°</span>
+      <span class="info-2">Title</span>
+      <span class="info-3">Time</span>
+    </div>
     {% for _song in songs %}
     <div class="lineperline">
-      {{_song.nb}}
-      {{_song.title}}
-      {{_song.time}}
+      <span class="info-1">{{_song.nb}} -</span>
+      <span class="info-2">{{_song.title}}</span>
+      <span class="info-3">{{_song.time}}</span>
     </div>
     {% endfor %}
   </div>

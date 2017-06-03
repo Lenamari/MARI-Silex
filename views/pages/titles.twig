@@ -2,10 +2,17 @@
 
 <div class="song-presentation">
   <div class="song-zone">
+    <div class="lineperline-base">
+      <span class="info-1">N°</span>
+      <span class="info-2">Title</span>
+      <span class="info-3">Time</span>
+    </div>
     {% for _song in songs %}
-        {{_song.nb}}
-        {{_song.title}}
-        {{_song.time}}
+      <div class="lineperline">
+        <span class="info-1">{{_song.id}}</span>
+        <span class="info-2">{{_song.title}}</span>
+        <span class="info-3">{{_song.time}}</span>
+      </div>
     {% endfor %}
   </div>
 </div>
