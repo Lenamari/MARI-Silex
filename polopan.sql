@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Sam 03 Juin 2017 à 23:43
+-- Généré le :  Dim 04 Juin 2017 à 00:31
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.0.15
 
@@ -63,30 +63,30 @@ CREATE TABLE `albums_songs` (
 --
 
 INSERT INTO `albums_songs` (`id`, `id_albums`, `id_songs`) VALUES
-(1, 1, 2),
-(2, 1, 3),
-(3, 2, 4),
-(4, 1, 5),
-(5, 1, 6),
-(6, 1, 7),
-(7, 1, 8),
-(8, 1, 9),
-(9, 1, 10),
-(10, 1, 11),
-(11, 1, 12),
-(12, 1, 13),
-(13, 1, 14),
-(14, 2, 15),
-(15, 2, 16),
-(16, 3, 17),
-(17, 3, 18),
-(18, 3, 19),
-(19, 3, 20),
-(20, 3, 21),
-(21, 4, 22),
-(22, 4, 23),
-(23, 4, 24),
-(24, 5, 25);
+(1, 1, 1),
+(2, 1, 2),
+(3, 2, 3),
+(4, 1, 4),
+(5, 1, 5),
+(6, 1, 6),
+(7, 1, 7),
+(8, 1, 8),
+(9, 1, 9),
+(10, 1, 10),
+(11, 1, 11),
+(12, 1, 12),
+(13, 1, 13),
+(14, 2, 14),
+(15, 2, 15),
+(16, 3, 16),
+(17, 3, 17),
+(18, 3, 18),
+(19, 3, 19),
+(20, 3, 20),
+(21, 4, 21),
+(22, 4, 22),
+(23, 4, 23),
+(24, 5, 24);
 
 -- --------------------------------------------------------
 
@@ -171,7 +171,7 @@ ALTER TABLE `albums_songs`
 -- AUTO_INCREMENT pour la table `songs`
 --
 ALTER TABLE `songs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
