@@ -16,7 +16,7 @@ body{
 .header{
   width: 100%;
   height: 50px;
-  position: absolute;
+  display:flex;
 }
 
 .header ul {
@@ -39,7 +39,7 @@ body{
   font-size: 18px;
   text-decoration: none;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   text-transform: uppercase;
 }
@@ -66,7 +66,7 @@ body{
   height: 480px;
   color:white;
   z-index: 3;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,7 +97,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .access-albums a{
@@ -135,14 +134,47 @@ body{
   color: white;
 }
 
+.title-albums{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-bottom:20px;
+}
+
+.albums-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  color: white;
+}
+
 .album-zone{
-  width:200px;
+  margin-left: 100px;
+  margin-bottom:50px;
+  text-align: center;
+}
+
+.album-zone-img{
+  width: 200px;
   height: 200px;
   background-color: white;
-  margin: 50px 50px;
-  background-image: url(../img/album/1.jpg);
   background-size: 100%;
 }
+
+.album-zone span{
+  margin-top:30px;
+}
+
+.albums-display a{
+  text-decoration: none;
+}
+.albums-display a span{
+  color: white;
+
+}
+
+
 
 
 /*MEDIA QUERIES*/
@@ -153,6 +185,6 @@ body{
   }
 
   .first-container{
-    background-color: #01423c;
+    /*background: none;*/
   }
 }

@@ -21,7 +21,7 @@ switch($_SERVER['HTTP_HOST'])
 // Init Silex
 $app = new Silex\Application();
 $app['debug'] = true;
-$app['config'] = $config;
+// $app['config'] = $config;
 
 
 // Services
@@ -52,22 +52,27 @@ $app->get('/', function() use ($app)
 
 $app->get('/albums', function() use ($app)
 {
-    return $app['twig']->render('pages/albums.twig');
+			$data = array();
+
+			$albumsModel = new Site\Models\Albums($app['db']);
+			$data['albums'] = $albumsModel->getAll();
+
+			return $app['twig']->render('pages/albums.twig', $data);
 })
 ->bind('albums');
 
-$app->get('/album/{number}', function($number) use ($app)
-{
-    return 'Page number: '.$number;
-})
-->assert(number, '[1-5]')
-->bind('album');
+
 
 $app->get('/titres', function() use ($app)
 {
-    return $app['twig']->render('pages/titles.twig');
+    $data = array();
+
+    $albumsModel = new Site\Models\Albums($app['db']);
+    $data['songs'] = $albumsModel->getAllSongs();
+    return $app['twig']->render('pages/titles.twig',$data);
 })
 ->bind('titres');
+
 
 $app
 	->get('/album/{id}', function($id) use ($app)
@@ -75,18 +80,24 @@ $app
 		$data = array();
 
 		$albumsModel = new Site\Models\Albums($app['db']);
-		$data['album'] = $albumsModel->getById($id);
+		$data['album'] = $albumsModel->getAlbumInformation($id);
+		$data['songs'] = $albumsModel->getSongsbyAlbumId($id);
+
+    // echo'<pre>';
+    // print_r($data['album']);
+    // echo '</pre>';
+    // exit();
 
 		if(!$data['album'])
 		{
 			$app->abort(404);
 		}
 
-		$data['title'] = $data['album']->name;
+		// $data['title'] = $data['album']->name;
 
 	    return $app['twig']->render('pages/album.twig', $data);
 	})
-	->assert('id', '\d+')
+	->assert('id', '[1-5]')
 	->bind('album');
 
 // Run Silex

@@ -1,28 +1,20 @@
 {{include('partials/header.twig')}}
 
-<div class="second-container">
-  <div class="title-logo">
-    <a href="{{ url('home') }}">Polo & Pan</a>
-  </div>
-  <div class="header">
-    <ul>
-      <li>
-        <a href=" {{ url('home') }} ">Accueil</a>
-      </li>
-      <li>
-        <a href=" {{ url('albums') }} ">Albums</a>
-      </li>
-      <li>
-        <a href="{{ url('titres') }}">Titres</a>
-      </li>
-    </ul>
-  </div>
+
+<h2 class="title-albums">Albums et EP's</h2>
+
+<div class="albums-display">
+  {% for _album in albums %}
+    <a href="{{ url('album', {id: _album.id}) }}">
+      <div class="album-zone">
+        <div class="album-zone-img">
+          <img src="{{ global.request.basepath }}/assets/img{{ _album.img }}.jpg" width="100%">
+        </div>
+        <span>{{ _album.title }}</span>
+      </div>
+    </a>
+  {% endfor %}
 </div>
-
-<div class="album-zone">
-
-</div>
-
 
 </body>
 </html>

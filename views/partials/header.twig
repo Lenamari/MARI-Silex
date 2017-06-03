@@ -9,3 +9,20 @@
     <link rel="stylesheet" href="{{ global.request.basepath }}/assets/style/style.css">
 </head>
 <body>
+
+  <div class="header">
+    <div class="title-logo">
+      <a href="{{ url('home') }}">Polo & Pan</a>
+    </div>
+    <ul>
+      <li>
+        <a href=" {{ url('home') }} ">Accueil</a>
+      </li>
+      <li>
+        <a href=" {{ url('albums') }} ">Albums</a>
+      </li>
+      <li>
+        <a href="{{ url('titres') }}">Titres</a>
+      </li>
+    </ul>
+  </div>

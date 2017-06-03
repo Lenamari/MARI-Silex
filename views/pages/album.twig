@@ -1,2 +1,22 @@
 {{include('partials/header.twig')}}
-{{include('partials/footer.twig')}}
+
+<div class="album-presentation">
+      <div class="album-zone">
+        {{album.title}}
+        {{album.description}}
+        {{album.date}}
+      </div>
+</div>
+
+<div class="song-presentation">
+  <div class="song-zone">
+    {% for _song in songs %}
+        {{_song.nb}}
+        {{_song.title}}
+        {{_song.time}}
+    {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>

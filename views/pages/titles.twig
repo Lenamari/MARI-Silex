@@ -1,4 +1,14 @@
 {{include('partials/header.twig')}}
-HEY COCO
+
+<div class="song-presentation">
+  <div class="song-zone">
+    {% for _song in songs %}
+        {{_song.nb}}
+        {{_song.title}}
+        {{_song.time}}
+    {% endfor %}
+  </div>
+</div>
+
 </body>
 </html>
