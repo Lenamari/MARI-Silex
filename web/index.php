@@ -96,6 +96,15 @@ $app
 	->assert('id', '[1-5]')
 	->bind('album');
 
+	// Error
+$app
+    ->error(function() use ($app)
+    {
+        $data['title'] = 'Error';
+        $data['code'] = $code;
+        $data['error'] = true;
+        return $app['twig']->render('pages/error.twig', $data);
+    });
 
 // Run Silex
 $app->run();

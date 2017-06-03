@@ -1,5 +1,5 @@
 # POLO & PAN
-Here is the web site that I realized on the artists Polo & Pan
+Here is the web site that I realized on the artists Polo & Pan.
 
 ## Prerequisites
 * Install [Node.js](https://nodejs.org/en/)
@@ -15,9 +15,6 @@ composer install
 ```
 npm install
 ```
-*You may need to install with sudo if you are a macOS user*
-* Update web/helpers/config.php switch cases if needed
-
 
 ## Features
 * Silex
@@ -25,7 +22,7 @@ npm install
 * Routes
 * Use Models for SQL request
 * Almost Responsive website
-* Handle error and 404 page
+* 404 page
 
 
 ### Tasks
@@ -36,7 +33,3 @@ npm install
 
 ## Author
 [Léna Mari]
-
-
-## Licence
-This repository is under MIT Licence.

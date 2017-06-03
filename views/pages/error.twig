@@ -1,0 +1,16 @@
+{{include('partials/header.twig')}}
+
+
+<div class="error-page">
+    {% if error %}
+    <div>
+        <h1 class="error-title">Error 404</h1>
+          <div class="access-home-error">
+            <a href=" {{ url('home') }} ">Le site que vous cherchez</a>
+          </div>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

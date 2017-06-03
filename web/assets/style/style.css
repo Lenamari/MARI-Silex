@@ -5,6 +5,7 @@ body {
   margin: 0;
 }
 
+
 /* HOME PAGE */
 
 .first-container {
@@ -54,7 +55,7 @@ body {
   width: 130px;
   height: 50px;
   border: solid white 1px;
-  border-radius: 10px;
+  border-radius: 4px;
   transition: all ease-in-out 0.3s;
   cursor: pointer;
   display: flex;
@@ -68,14 +69,13 @@ body {
 }
 
 .access-albums:hover {
-  background-color: white;
+  background-color: #f9ff81;
   transition: all ease-in-out 0.3s;
 }
 
 .access-albums:hover a {
   color: #01423c;
 }
-
 
 
 /* HEADER */
@@ -116,6 +116,7 @@ body {
 
 .header ul li a:hover {
   font-weight: bold;
+  color: #f9ff81;
   cursor: pointer;
 }
 
@@ -253,6 +254,54 @@ body {
 .info-3 {
   float: right;
   margin-right: 20px;
+}
+
+
+/*PAGE ERROR 404*/
+
+.error-page {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  background-image: url(../img/img_polopan.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.error-title {
+  margin-top: 100px;
+  margin-right: 170px;
+  font-family: 'Vibur', cursive;
+  color: white;
+  font-size: 100px;
+}
+
+.access-home-error {
+  width: 190px;
+  height: 50px;
+  border: solid white 1px;
+  border-radius: 4px;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 21%;
+}
+
+.access-home-error a {
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
+.access-home-error:hover {
+  background-color: #f9ff81;
+  transition: all ease-in-out 0.3s;
+}
+
+.access-home-error:hover a {
+  color: #01423c;
 }
 
 
