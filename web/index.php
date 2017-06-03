@@ -76,6 +76,7 @@ $app->get('/titres', function() use ($app)
 ->bind('titres');
 
 
+
 $app
 	->get('/album/{id}', function($id) use ($app)
 	{
@@ -85,22 +86,16 @@ $app
 		$data['album'] = $albumsModel->getAlbumInformation($id);
 		$data['songs'] = $albumsModel->getSongsbyAlbumId($id);
 
-    // echo'<pre>';
-    // print_r($data['album']);
-    // echo '</pre>';
-    // exit();
-
 		if(!$data['album'])
 		{
 			$app->abort(404);
 		}
 
-		// $data['title'] = $data['album']->name;
-
 	    return $app['twig']->render('pages/album.twig', $data);
 	})
 	->assert('id', '[1-5]')
 	->bind('album');
+
 
 // Run Silex
 $app->run();

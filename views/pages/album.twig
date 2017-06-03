@@ -4,26 +4,33 @@
   <div class="album-zone-img-bis">
     <img src="{{ global.request.basepath }}/assets/img/{{ album.img }}.jpg" width="100%">
   </div>
-      <div class="album-zone-bis">
-        <div class="album-zone-bis-title"> {{album.title}} </div>
-        <div class="album-zone-bis-date"> {{album.date}} </div>
-        <div class="album-zone-bis-description"> {{album.description}} </div>
-      </div>
+  <div class="album-zone-bis">
+    <div class="album-zone-bis-title">
+      {{album.title}}
+    </div>
+    <div class="album-zone-bis-date">
+      {{album.date}}
+    </div>
+    <div class="album-zone-bis-description">
+      {{album.description}}
+    </div>
+  </div>
 </div>
 
 <div class="song-presentation">
   <div class="song-zone">
     <div class="lineperline-base">
-      <span class="info-1"> n°</span>
+      <span class="info-1">
+        n°</span>
       <span class="info-2">Title</span>
       <span class="info-3">Time</span>
     </div>
     {% for _song in songs %}
-    <div class="lineperline">
-      <span class="info-1">{{_song.nb}} -</span>
-      <span class="info-2">{{_song.title}}</span>
-      <span class="info-3">{{_song.time}}</span>
-    </div>
+      <div class="lineperline">
+        <span class="info-1">{{_song.nb}}</span>
+        <span class="info-2">{{_song.title}}</span>
+        <span class="info-3">{{_song.time}}</span>
+      </div>
     {% endfor %}
   </div>
 </div>
