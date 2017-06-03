@@ -50,6 +50,8 @@ $app->get('/', function() use ($app)
 })
 ->bind('home');
 
+
+
 $app->get('/albums', function() use ($app)
 {
 			$data = array();

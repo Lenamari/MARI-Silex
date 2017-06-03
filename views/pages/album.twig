@@ -1,19 +1,24 @@
 {{include('partials/header.twig')}}
 
 <div class="album-presentation">
-      <div class="album-zone">
-        {{album.title}}
-        {{album.description}}
-        {{album.date}}
+  <div class="album-zone-img-bis">
+    <img src="{{ global.request.basepath }}/assets/img/{{ album.img }}.jpg" width="100%">
+  </div>
+      <div class="album-zone-bis">
+        <div class="album-zone-bis-title"> {{album.title}} </div>
+        <div class="album-zone-bis-date"> {{album.date}} </div>
+        <div class="album-zone-bis-description"> {{album.description}} </div>
       </div>
 </div>
 
 <div class="song-presentation">
   <div class="song-zone">
     {% for _song in songs %}
-        {{_song.nb}}
-        {{_song.title}}
-        {{_song.time}}
+    <div class="lineperline">
+      {{_song.nb}}
+      {{_song.title}}
+      {{_song.time}}
+    </div>
     {% endfor %}
   </div>
 </div>

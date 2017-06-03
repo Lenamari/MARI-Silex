@@ -162,20 +162,64 @@ body{
   background-size: 100%;
 }
 
-.album-zone span{
-  margin-top:30px;
-}
-
 .albums-display a{
   text-decoration: none;
 }
 .albums-display a span{
   color: white;
+  font-family: 'Open Sans', sans-serif;
+}
 
+/*PAGE ALBUM ID*/
+.album-presentation {
+  display: flex;
+  margin-top: 140px;
+  justify-content: center;
+
+}
+.album-zone-bis{
+  width:50%;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  color:white;
+}
+
+.album-zone-img-bis{
+  width: 200px;
+  height: 200px;
+  padding-right: 30px;
+}
+
+.album-zone-bis-title{
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.album-zone-bis-date{
+  padding-bottom: 50px;
 }
 
 
+.song-presentation{
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
 
+.song-zone{
+  width:67%;
+  justify-content: center;
+  color:#01423c;
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+}
+
+.lineperline{
+  border-bottom: solid 1px #099185;
+  padding: 10px;
+}
 
 /*MEDIA QUERIES*/
 

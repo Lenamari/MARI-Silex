@@ -19,23 +19,6 @@ class Albums
   		return $albums ;
   	}
 
-    // 	public function getById($id)
-    // 	{
-    // 		$prepare = $this->db->prepare('
-    // 			SELECT * FROM albums WHERE id = :id LIMIT 1
-    // 		');
-    // 		$prepare->bindValue('id', $id);
-    // 		$prepare->execute();
-    // 		$album = $prepare->fetch();
-    //
-  	// 	if($album)
-  	// 	{
-  	// 		$album->songs = $this->_getSongsByAlbumId($album->id);
-  	// 	}
-    //
-  	// 	return $album;
-  	// }
-
 
     public function getAlbumInformation($id)
     {
@@ -63,6 +46,8 @@ class Albums
 
         return $songs;
     }
+
+
 
     public function getSongsbyAlbumId($id)
     {
